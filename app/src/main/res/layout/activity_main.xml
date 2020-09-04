@@ -19,23 +19,24 @@
         android:layout_marginBottom="16dp"
         android:hint="Enter the Bus No."
         app:endIconMode="clear_text"
-        app:layout_constraintBottom_toTopOf="@+id/fdfgd"
+        app:layout_constraintBottom_toTopOf="@+id/startmyday"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
             android:id="@+id/bus_number"
-            android:inputType="number"
-            android:layout_height="wrap_content" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/fdfgd"
+        android:id="@+id/startmyday"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
+
         android:layout_marginLeft="24dp"
         android:layout_marginRight="24dp"
         android:text="@string/start_my_day"

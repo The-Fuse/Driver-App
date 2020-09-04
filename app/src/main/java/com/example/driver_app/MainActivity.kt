@@ -6,7 +6,6 @@ import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
@@ -22,7 +21,7 @@ class MainActivity : AppCompatActivity() {
         supportActionBar?.setBackgroundDrawable(ColorDrawable(Color.parseColor("#ffffff")))
         val user = Firebase.auth.currentUser
         if (user != null){
-            Snackbar.make(fdfgd, "Logged in Successfully !!", Snackbar.LENGTH_SHORT).show()
+            Snackbar.make(startmyday, "Logged in Successfully !!", Snackbar.LENGTH_SHORT).show()
         }else {
             val intent = Intent(this, Login::class.java)
             startActivity(intent)
