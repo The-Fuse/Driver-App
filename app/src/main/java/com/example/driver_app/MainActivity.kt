@@ -10,8 +10,10 @@ import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_registeration.*
 
 
 class MainActivity : AppCompatActivity() {
@@ -27,6 +29,16 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
+        val db = Firebase.firestore
+        val uid = user?.uid.toString()
+        val ref = db.collection("Drivers").document(uid)
+        ref.get()
+            .addOnSuccessListener { document ->
+                if (document !=null){
+                    val username = document.get("name")
+                    supportActionBar?.setTitle("Hello ${username}")
+                }
+            }
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
