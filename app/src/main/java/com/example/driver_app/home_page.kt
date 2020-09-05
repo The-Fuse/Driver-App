@@ -39,10 +39,10 @@ class home_page : AppCompatActivity() {
             )
         }
             locationmanager = getSystemService(Context.LOCATION_SERVICE) as LocationManager
-            if (locationmanager.isProviderEnabled(LocationManager.GPS_PROVIDER)){
-                location = locationmanager.getLastKnownLocation(LocationManager.GPS_PROVIDER)!!
-            }else{
+            if (locationmanager.isProviderEnabled(LocationManager.NETWORK_PROVIDER)){
                 location = locationmanager.getLastKnownLocation(LocationManager.NETWORK_PROVIDER)!!
+            }else{
+                location = locationmanager.getLastKnownLocation(LocationManager.GPS_PROVIDER)!!
             }
             val locationlistener = object: LocationListener {
                 override fun onLocationChanged(p0: Location) {
