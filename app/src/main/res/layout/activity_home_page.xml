@@ -175,30 +175,28 @@
     </com.google.android.material.card.MaterialCardView>
 
     <Button
-        android:id="@+id/stopmyday"
-        android:layout_width="164dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="12dp"
-        android:layout_marginRight="12dp"
-        android:layout_marginBottom="256dp"
-        android:text="Stop my day"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.777"
-        app:layout_constraintStart_toEndOf="@+id/takeabreak"
-        app:layout_constraintTop_toBottomOf="@+id/noofpassengerforpaybill" />
-
-    <Button
         android:id="@+id/takeabreak"
         android:layout_width="163dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginLeft="12dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="256dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
         android:text="Take a Break"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/noofpassengerforpaybill" />
+        app:layout_constraintTop_toBottomOf="@+id/noofpassengerforpaybill"
+        app:layout_constraintVertical_bias="0.503" />
+
+    <Button
+        android:id="@+id/stopmyday"
+        android:layout_width="164dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:layout_marginRight="12dp"
+        android:text="Stop my day"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.857"
+        app:layout_constraintStart_toEndOf="@+id/takeabreak"
+        app:layout_constraintTop_toBottomOf="@+id/noofpassengerforpaybill"
+        app:layout_constraintVertical_bias="0.503" />
 </androidx.constraintlayout.widget.ConstraintLayout>
